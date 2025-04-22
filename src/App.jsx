@@ -1,11 +1,13 @@
 import React from 'react'
 import './App.css'
+import Layout from './layout/layout'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
-    <div>
-      <h1>Weather App</h1>
-    </div>
+    <Layout>
+      <Dashboard />
+    </Layout>
   )
 }
 
