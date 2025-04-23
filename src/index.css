@@ -136,3 +136,7 @@ button {
   outline: none;
   font-family: inherit;
 }
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
