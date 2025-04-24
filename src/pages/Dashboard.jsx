@@ -3,6 +3,7 @@ import SearchBar from '../components/SearchBar';
 import WeatherCard from '../components/WeatherCard';
 import { getCurrentWeather } from '../service/weatherInfoService';
 import { getForecast } from '../service/forecastService';
+import Header from '../components/common/Header';
 
 function Dashboard  ()  {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -45,11 +46,20 @@ function Dashboard  ()  {
   }
 
   return (
+    <>
+      {/* <Header
+        location={currentWeather?.location || 'Loading...'} 
+      /> */}
     <div style={{
       width: '100%',
-      maxWidth: '1200px'
+      // maxWidth: '1200px'
     }}>
-      <SearchBar onSearch={fetchWeatherData} />
+      <Header
+        onSearch={fetchWeatherData}
+        location={currentWeather?.location || 'Loading...'} 
+        region={currentWeather?.region || 'Loading...'}
+      />
+      {/* <SearchBar onSearch={fetchWeatherData} /> */}
       {loading && !currentWeather ? (
         <div><h1>Loading...</h1></div>
       ) : error ? (
@@ -61,6 +71,7 @@ function Dashboard  ()  {
         />
       )}
     </div>
+    </>
   )
 }
 

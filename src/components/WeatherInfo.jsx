@@ -9,7 +9,8 @@ function WeatherInfo  ({ weather })  {
     { icon: '💨', title: 'Wind', value: `${weather.wind_kph} km/h` },
     { icon: '🧭', title: 'Direction', value: weather.wind_dir },
     { icon: '🌡️', title: 'Pressure', value: `${weather.pressure} mb` },
-    { icon: '🌧️', title: 'Rain', value: `${weather.precipitation} mm` }
+    { icon: '🌧️', title: 'Rain', value: `${weather.precipitation} mm` },
+    { icon: '☀️', title: 'UV Index', value: `${weather.uv}` }
   ];
 
   const astroDetails = [
